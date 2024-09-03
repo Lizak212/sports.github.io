@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Toronto Maple Leafs</title>
+  
+  <style>
+    .box {
+      width: 50%;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class = "box">
+    <canvas id = "canvas" width = 400px height = 400px></canvas>
+  </div>
+  
+  <button onclick = "window.location.href = 'index.html'"> Back</button>
+  
+  <script src = "https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script>
+    var canvas = document.getElementById("canvas");
+    var chart = new Chart (canvas, {
+      type: "bar", 
+
+      data: {
+        labels: ["Marshall R", "Alex S", "Connor D", "Max D", "Simon B", "Conor T", "Pontus H", "Calle J", "David K", "Matthew K", "Chris T", "Mitch M", "Auston M", "Bobby M", "Fraser M", "William N", "Ryan R", "John T", "Timothy L", "Jake M", "Morgan R", "Nicholas R"],
+        datasets: [{
+          data: [0, 0, 11, 9, 1, 1, 7, 10, 8, 15, 2, 26, 69, 15, 0, 40, 4, 29, 3, 8, 7, 14], 
+          backgroundColor: ["blue"]
+        }]
+      },
+
+      options: {
+        responsive: true, 
+
+        plugins: {
+          title: {
+            display: true,
+            text: "Most to Least Goals"
+          },
+
+          legend: {
+            display: false
+          }
+        }
+      }
+    
+        
+    });
+  </script>
+
+
+</body>
+
+</html>

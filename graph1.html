@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Toronto Maple Leafs</title>
+
+  <style>
+    .box {
+      width: 50%;
+      margin: 0 auto;
+    }
+  </style>
+    
+</head>
+
+<body>
+
+  <div class = "box">
+    <canvas id = "canvas" width = 400px height = 400px></canvas>
+  </div>
+
+  <button onclick = "window.location.href = 'index.html'"> Back</button>
+  
+  <script src = "https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script>
+
+    var canvas = document.getElementById ("canvas");
+
+    var chart = new Chart (canvas, {
+      type: "pie", 
+
+      data: {
+        labels: ["wins", "losses"],
+        datasets: [{
+          data: [3000, 2800],
+          backgroundColor: ["red", "blue"]
+        }]
+      },
+
+      options: {
+        responsive: true,
+
+        plugins: {
+          title: {
+            display: true,
+            text: "Wins Vs. Losses"
+          }
+        }, 
+
+        legend: {
+          display: false
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

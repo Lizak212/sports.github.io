@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Toronto Maple Leafs</title>
+  
+  <style>
+    .box {
+      width: 50%;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class = "box">
+    <canvas id = "canvas" width = 400px height = 400px></canvas>
+  </div>
+
+  <button onclick = "window.location.href = 'index.html'"> Back</button>
+
+  <script src = "https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script>
+
+
+    var canvas = document.getElementById ("canvas");
+
+    var chart = new Chart (canvas, {
+      type: "line", 
+
+      data: {
+        labels: ["january", "february", "march", "april", "october", "november", "december"], 
+        datasets: [{
+          data: [8, 9, 8, 4, 5, 7, 5],
+          backgroundColor: ["red"]
+        }]
+      },
+    
+      options: {
+        responsive: true,
+
+        plugins: {
+          title: {
+            display: true,
+            text: "Number of Wins Throughout the Months"
+          },
+
+          legend: {
+            display: false
+          }
+        }
+      },
+
+      
+        
+        
+    });
+
+  </script>
+
+
+</body>
+
+</html>
